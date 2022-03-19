@@ -1766,9 +1766,42 @@
                 }
             }
 
+<<<<<<< HEAD
             slideMoving = true && !FP.test.isTesting;
             landscapeScroll(slides, destiny, direction);
         }
+=======
+                var previousDestTop = 0;
+                var containerTop = container.getBoundingClientRect().top;
+                /**
+                 * Returns the destination Y position based on the scrolling direction and
+                 * the height of the section.
+                 */
+                function getDestinationPosition(element) {
+                    var elementHeight = element.offsetHeight;
+                    var elementTop = element.offsetTop;
+
+                    //top of the desination will be at the top of the viewport
+                    var position = elementTop;
+                    var isScrollingDown = elementTop > previousDestTop;
+                    var sectionBottom = position - windowsHeight + elementHeight;
+                    var bigSectionsDestination = options.bigSectionsDestination;
+
+                    // position centered
+                    var center = (position + sectionBottom) / 2 + containerTop;
+                    if (center > 0) position = center;
+
+                    //is the destination element bigger than the viewport?
+                    if (elementHeight > windowsHeight) {
+                        //scrolling up?
+                        if (
+                            (!isScrollingDown && !bigSectionsDestination) ||
+                            bigSectionsDestination === "bottom"
+                        ) {
+                            position = sectionBottom;
+                        }
+                    }
+>>>>>>> parent of d62f032 (every section is now in center)
 
         /**
          * Maintains the active slides in the viewport
@@ -1781,6 +1814,7 @@
             }
         }
 
+<<<<<<< HEAD
         var previousDestTop = 0;
         var containerTop = container.getBoundingClientRect().top;
         /**
@@ -1790,6 +1824,17 @@
         function getDestinationPosition(element) {
             var elementHeight = element.offsetHeight;
             var elementTop = element.offsetTop;
+=======
+                    /*
+                    Keeping record of the last scrolled position to determine the scrolling direction.
+                    No conventional methods can be used as the scroll bar might not be present
+                    AND the section might not be active if it is auto-height and didnt reach the middle
+                    of the viewport.
+                    */
+                    previousDestTop = position;
+                    return position;
+                }
+>>>>>>> parent of d62f032 (every section is now in center)
 
             //top of the desination will be at the top of the viewport
             var position = elementTop;
