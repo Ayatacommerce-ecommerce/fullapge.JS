@@ -4878,10 +4878,13 @@ setTimeout(() => {
                         for (var i = 1; i < 16; i++) {
                             imagesList.push(getImageUrl(1, i));
                         }
+
+                        // sleep code for 1 seocnd just for fun
+                        setTimeout(() => {
                         // remove the loading indicator
                         $(".waituntilload")[0].classList.add("fadehide");
 
-
+                        // Animate the first 15 entry images
                         var index = 0;
                         var interval = setInterval(function () {
                             if (index < 15) {
@@ -4891,6 +4894,7 @@ setTimeout(() => {
                             }
                             index++;
                         }, scrollingSpeed / 30);
+                    }, 2500);
                     }
                 },
                 onLeave: (origin, destination, direction) => {
