@@ -1797,10 +1797,6 @@
                     var sectionBottom = position - windowsHeight + elementHeight;
                     var bigSectionsDestination = options.bigSectionsDestination;
 
-                    // position centered
-                    var center = (position + sectionBottom) / 2 + containerTop;
-                    if (center > 0) position = center;
-
                     //is the destination element bigger than the viewport?
                     if (elementHeight > windowsHeight) {
                         //scrolling up?
@@ -1817,6 +1813,10 @@
                         //The bottom of the destination will be at the bottom of the viewport
                         position = sectionBottom;
                     }
+
+                    // position centered
+                    var center = (position + sectionBottom) / 2 + containerTop;
+                    if (center > 0) position = center;
 
                     /*
                     Keeping record of the last scrolled position to determine the scrolling direction.
