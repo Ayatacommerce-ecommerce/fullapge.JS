@@ -1,3 +1,5 @@
+setTimeout(() => {
+
 /*!
          * fullPage 3.1.2
          * https://github.com/alvarotrigo/fullPage.js
@@ -4933,3 +4935,4 @@
                 }
             };
         }
+    }, 5000);
