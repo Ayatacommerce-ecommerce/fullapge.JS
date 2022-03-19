@@ -4856,12 +4856,12 @@ setTimeout(() => {
         /*
          * move the footer section inside to fullpage section
          */
-//         const footer = $("footer")[0];
-//         const lastSection = document.createElement("div");
-//         lastSection.className = "section fp-auto-height";
-//         lastSection.appendChild(footer.cloneNode(true));
-//         fullPageContainer.appendChild(lastSection);
-//  TODO footer code hide
+        const footer = $("footer")[0];
+        const lastSection = document.createElement("div");
+        lastSection.className = "section fp-auto-height";
+        lastSection.appendChild(footer.cloneNode(true));
+        fullPageContainer.appendChild(lastSection);
+
         /*
          * Initialize the fullPage plugin
          */
