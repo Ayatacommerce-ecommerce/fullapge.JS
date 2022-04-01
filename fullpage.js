@@ -4939,13 +4939,4 @@ setTimeout(() => {
             }
         };
     }
-
-    /*
-    *  Function for alternative shogun tabs
-    */
-    function clickTab(tabNumber) {
-        $(".shogun-tab")[tabNumber].click();
-        console.log(product);
-    }
-
 }, 5000);
