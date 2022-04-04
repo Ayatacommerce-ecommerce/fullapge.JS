@@ -4869,6 +4869,7 @@ setTimeout(() => {
         new fullpage(".fullPageContainer .shg-box-content", {
             touchWrapper: $(".fullPageContainer .shg-box-content"),
             scrollingSpeed: scrollingSpeed,
+            navigation: true, // to enable navigation dots
             // load the first section animation soon after the page loads
             afterLoad: (activeSection, element, direction) => {
                 // play the first entry animation of the first section
