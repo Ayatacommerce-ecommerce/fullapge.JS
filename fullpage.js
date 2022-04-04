@@ -4741,7 +4741,7 @@ setTimeout(() => {
         if (section >= 11) section = section - 1;
         if (section >= 12) section = section - 1;
 
-        return `https://debermol.sirv.com/images/${isMobile ? "Mobile/" : ""
+        return `https://erryoder.sirv.com/images/${isMobile ? "Mobile/" : ""
             }Sequence_${section.toString().padStart(2, "0")}/sh_${section
                 .toString()
                 .padStart(2, "0")}0${isMobile ? "_m" : ""}.${index
