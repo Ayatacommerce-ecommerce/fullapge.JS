@@ -1783,7 +1783,7 @@ setTimeout(() => {
             }
 
             var previousDestTop = 0;
-            var containerTop = container.getBoundingClientRect().top;
+            var headerHeight = $('header')[0].offsetHeight;
             /**
              * Returns the destination Y position based on the scrolling direction and
              * the height of the section.
@@ -1799,7 +1799,7 @@ setTimeout(() => {
                 var bigSectionsDestination = options.bigSectionsDestination;
 
                 // position centered
-                var center = (position + sectionBottom) / 2 + containerTop;
+                var center = (position + sectionBottom) / 2 + headerHeight;
                 if (center > 0) position = center;
 
                 //is the destination element bigger than the viewport?
