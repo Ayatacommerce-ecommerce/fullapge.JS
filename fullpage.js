@@ -4725,12 +4725,12 @@ setTimeout(() => {
     const getImageUrl = (section, index) => {
         if (
             section < 0 ||
+            section == 1 ||
             section == 4 ||
             section == 10 ||
             section == 11 ||
             section == 13 ||
-            section == 15 ||
-            section > 16
+            section >= 15
         ) {
             return emptyImageUrl;
         }
