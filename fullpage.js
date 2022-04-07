@@ -4870,33 +4870,40 @@ setTimeout(() => {
             touchWrapper: $(".fullPageContainer .shg-box-content"),
             scrollingSpeed: scrollingSpeed,
             navigation: true, // to enable navigation dots
-            // load the first section animation soon after the page loads
+            // load the  fade image in section 5
             afterLoad: (activeSection, element, direction) => {
-                // play the first entry animation of the first section
-                if (direction == null && activeSection.isFirst) {
-                    // imagesList is not needed
-                    var imagesList = [];
-                    for (var i = 1; i < 16; i++) {
-                        imagesList.push(getImageUrl(1, i));
+                if(element.index == 4 || activeSection.index ==5){
+                    const img = new Image();
+                    img.src = 'https://erryoder.sirv.com/icons/sh_040.00015%20(1).png';
+                    img.onload = function () {
+                        context.drawImage(img, 0, 0, canvas.width, canvas.height);
                     }
-
-                    // sleep code for 1 seocnd just for fun
-                    setTimeout(() => {
-                        // remove the loading indicator
-                        $(".waituntilload")[0].classList.add("fadehide");
-
-                        // Animate the first 15 entry images
-                        var index = 0;
-                        var interval = setInterval(function () {
-                            if (index < 15) {
-                                img.src = imagesList[index];
-                            } else if (index > 15) {
-                                clearInterval(interval);
-                            }
-                            index++;
-                        }, scrollingSpeed / 30);
-                    }, 2500);
                 }
+                // // play the first entry animation of the first section
+                // if (direction == null && activeSection.isFirst) {
+                //     // imagesList is not needed
+                //     var imagesList = [];
+                //     for (var i = 1; i < 16; i++) {
+                //         imagesList.push(getImageUrl(1, i));
+                //     }
+
+                //     // sleep code for 1 seocnd just for fun
+                //     setTimeout(() => {
+                //         // remove the loading indicator
+                //         $(".waituntilload")[0].classList.add("fadehide");
+
+                //         // Animate the first 15 entry images
+                //         var index = 0;
+                //         var interval = setInterval(function () {
+                //             if (index < 15) {
+                //                 img.src = imagesList[index];
+                //             } else if (index > 15) {
+                //                 clearInterval(interval);
+                //             }
+                //             index++;
+                //         }, scrollingSpeed / 30);
+                //     }, 2500);
+                // }
             },
             onLeave: (origin, destination, direction) => {
 
