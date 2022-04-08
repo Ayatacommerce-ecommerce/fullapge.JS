@@ -4884,7 +4884,7 @@ setTimeout(() => {
             navigation: true, // to enable navigation dots
             // load the  fade image in section 5
             afterLoad: (activeSection, element, direction) => {
-                if(element.index == 4 || activeSection.index ==5){
+                if(element.index == 4){
                     const img = new Image();
                     img.src = 'https://erryoder.sirv.com/icons/sh_040.00015%20(1).png';
                     img.onload = function () {
