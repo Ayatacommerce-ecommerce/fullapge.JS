@@ -4715,8 +4715,7 @@ setTimeout(() => {
     const canvas = $("#anican")[0];
     const context = canvas.getContext("2d");
     const img = new Image();
-    const emptyImageUrl = `https://ayatacommerce-ecommerce.github.io/nextbase/assets/images/${isMobile ? "Mobile/" : ""
-        }Sequence_01/sh_010${isMobile ? "_m" : ""}.00001.png`;
+    const emptyImageUrl = `https://erryoder.sirv.com/images/Mobile/Sequence_01/sh_010_m.00001.png`;
     /********************************************************************************************/
     /********************************************************************************************/
     /********************************************************************************************/
