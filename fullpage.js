@@ -4723,6 +4723,18 @@ setTimeout(() => {
 
     // get image url for the section with frame index
     const getImageUrl = (section, index) => {
+        // empty images for moblie screen
+            if (isMobile){
+                if(
+                    section == 3 ||
+                    section == 6 ||
+                    section == 8 ||
+                    section == 12 ||
+                    section == 14
+                ){
+                    return emptyImageUrl;
+                }
+            }
         if (
             section < 0 ||
             section == 1 ||
