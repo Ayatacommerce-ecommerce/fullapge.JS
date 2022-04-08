@@ -4728,6 +4728,7 @@ setTimeout(() => {
                     section == 3 ||
                     section == 6 ||
                     section == 8 ||
+                    section == 9 ||
                     section == 12 ||
                     section == 14
                 ){
