@@ -1,5 +1,5 @@
 setTimeout(() => {
-
+//todo delete when migrate to original 
     /*!
              * fullPage 3.1.2
              * https://github.com/alvarotrigo/fullPage.js
