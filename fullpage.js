@@ -4779,7 +4779,7 @@ setTimeout(() => {
         const width = window.innerWidth;
         canvas.width = width;
         canvas.height = isMobile ? width : width * (9 / 16);
-        context.drawImage(img, 0, 0, canvas.width, canvas.height);
+        // context.drawImage(img, 0, 0, canvas.width, canvas.height);
         if (isMobile) {
             canvas.style.marginTop = "";
         } else {
