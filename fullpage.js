@@ -4939,6 +4939,24 @@ setTimeout(() => {
                 } else {
                     document.getElementById("moveTop").style.display = "block";
                 }
+
+                //******* */ Hide heaer on scroll down and show when scroll up *********/
+                var header = $('header')[0];
+                var childHeight = header.firstElementChild.offsetHeight;
+                if (direction === "down") {
+                    header.style.transitionDuration = ".5s";
+                    header.style.transform = "translate3d(0px,-" + childHeight + "px, 0px)";
+                    header.lastElementChild.style.marginTop = "0px";
+                    document.body.style.backgroundColor = "#000000";
+                    if (isMobile) {
+                        header.lastElementChild.style.marginTop = "15px";
+                    }
+                }
+                else {
+                    header.style.transform = "translate3d(0px, 0px, 0px)";
+                }
+
+                
                 // Function to animate the image sequence
                 animateInterSection(
                     origin.index + 1,
